@@ -1,7 +1,17 @@
-🧩 ¿Qué necesitas para correr este sistema?
+Primero, asegúrate de instalar la librería necesaria:
 
-Python con Flask: pip install flask
+pip install cryptography
 
-React con Vite: npm create vite@latest
+🔐 Notas importantes:
+La clave key se genera cada vez que corres el script. Si quieres descifrar el archivo más adelante, deberías guardar esa clave en un archivo y reutilizarla.
 
-Habilitar CORS en Flask si accedes desde otro puerto (puedo ayudarte con eso si lo necesitás).
+Puedes guardar la clave así:
+
+# Guardar la clave
+with open('clave.key', 'wb') as key_file:
+    key_file.write(key)
+
+# Leer la clave después
+with open('clave.key', 'rb') as key_file:
+    key = key_file.read()
+cipher = Fernet(key)

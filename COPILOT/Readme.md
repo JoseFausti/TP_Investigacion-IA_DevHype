@@ -1,9 +1,8 @@
-🚀 Cómo Ejecutar el Proyecto
+Asegúrate de instalar cryptography con pip install cryptography antes de ejecutar el código.
 
-1️⃣ Ejecutar el backend en Python:
-uvicorn server:app --reload
+Explicación del código:
+- Se genera una clave de cifrado y se almacena en un archivo clave.key para su uso posterior.
+- La función cifrar_json lee el archivo productos.json, cifra su contenido y lo guarda en productos_cifrados.json.
+- La función descifrar_json recupera la clave almacenada, descifra el archivo productos_cifrados.json y muestra su contenido en formato JSON.
 
-2️⃣ Iniciar el frontend en React:
-npm start
-
-3️⃣ Abrir http://localhost:3000/ en el navegador y probar el sistema de ordenamiento. 🎯
+De esta manera, puedes proteger los datos del JSON y recuperarlos cuando lo necesites. ¿Te gustaría hacer alguna mejora o agregar más funciones? 
